@@ -13,7 +13,7 @@
             }, function errorCallback(response) {
                 $scope.status = response.status;
                 $scope.statusText = response.statusText;
-                $('#popoverError').modal('show');
+                $('#modalError').modal('show');
             });
 
     }
