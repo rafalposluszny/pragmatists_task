@@ -28,5 +28,10 @@
             $scope.people.push({name: $scope.newName, email: $scope.newEmail});
         };
 
+        $scope.removeUser = function (person) {
+            var position = $scope.people.indexOf(person);
+            $scope.people.splice(position,1);
+        };
+
     }
 }) ();
