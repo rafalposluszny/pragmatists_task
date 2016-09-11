@@ -8,8 +8,13 @@
         $scope.people = [];
         
         $http.get('data/user-data.json')
-            .success(function (response) {
-                $scope.people = response;
-            })
+            .then(function successCallback(response) {
+                $scope.people = response.data;
+            }, function errorCallback(response) {
+                $scope.status = response.status;
+                $scope.statusText = response.statusText;
+                $('#popoverError').modal('show');
+            });
+
     }
 }) ();
