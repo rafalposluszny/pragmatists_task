@@ -3,6 +3,10 @@
 (function () {
     var app = angular.module('UserList', []);
     app.controller('BaseController', BaseControllerCtrl);
+    app.directive('userList', userListDir);
+    app.directive('modalError', modalErrorDir);
+    app.directive('modalCreate', modalCreateDir);
+    app.directive('modalEdit', modalEditDir);
     
     function BaseControllerCtrl ($scope, $http) {
 
@@ -43,6 +47,34 @@
             var position = $scope.people.indexOf(person);
             $scope.people.splice(position,1);
         };
-
     }
+    
+    function userListDir () {
+        return {
+            restrict: 'E',
+            templateUrl: 'template/user-list.html'
+        }
+    }
+    
+    function modalErrorDir () {
+        return {
+            restrict: 'E',
+            templateUrl: 'template/modal-error.html'
+        }
+    }
+    
+    function modalCreateDir () {
+        return {
+            restrict: 'E',
+            templateUrl: 'template/modal-create.html'
+        }
+    }
+    
+    function modalEditDir () {
+        return {
+            restrict: 'E',
+            templateUrl: 'template/modal-edit.html'
+        }
+    }
+    
 }) ();

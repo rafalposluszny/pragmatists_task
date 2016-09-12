@@ -1,0 +1,33 @@
+<div id="modalCreate" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-danger"><strong>Create user</strong></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" ng-submit="addUser()">
+                    <div class="form-group">
+                        <label for="newName" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="newName" placeholder="New name" ng-model="newUser.name" maxlength="30" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="newEmail" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="newEmail" placeholder="New email" ng-model="newUser.email" maxlength="30">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Create new user</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
