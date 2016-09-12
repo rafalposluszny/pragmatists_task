@@ -28,8 +28,12 @@
         };
 
         $scope.addUser = function () {
-            $scope.people.push($scope.newUser);
-            $('#modalCreate').modal('hide');
+            if ($scope.newUser != null) {
+                $scope.people.push($scope.newUser);
+                $('#modalCreate').modal('hide');
+            } else {
+                $('#modalCreate').modal('hide');
+            }
         };
 
         $scope.modalEdit = function (person) {
