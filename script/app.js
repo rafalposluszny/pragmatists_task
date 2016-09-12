@@ -26,7 +26,6 @@
         $scope.addUser = function () {
             $scope.people.push($scope.newUser);
             $('#modalCreate').modal('hide');
-            console.log($scope.newUser)
         };
 
         $scope.modalEdit = function (person) {
